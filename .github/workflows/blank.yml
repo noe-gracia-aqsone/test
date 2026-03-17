@@ -35,10 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: PR Comment
-        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        uses: thollander/actions-comment-pull-request@v3.0.1
         with:
           # GITHUB_TOKEN secret
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           # Message to comment
           message: |
             "Hello!"
