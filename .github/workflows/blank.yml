@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Commit Comment
-        uses: peter-evans/commit-comment@v4.0.0
+        uses: daohoangson/comment-on-github@v2.2.0
         with:
           body: |
             "Hello!"
