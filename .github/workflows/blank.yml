@@ -35,6 +35,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Commit Comment
+        env:
+          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
         uses: daohoangson/comment-on-github@v2.2.0
         with:
           body: |
