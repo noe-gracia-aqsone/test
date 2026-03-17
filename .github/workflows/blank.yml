@@ -34,10 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Commit Comment
-        env:
-          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
-        uses: daohoangson/comment-on-github@v2.2.0
+      - name: PR Comment
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
         with:
-          body: |
+          # GITHUB_TOKEN secret
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # Message to comment
+          message: |
             "Hello!"
